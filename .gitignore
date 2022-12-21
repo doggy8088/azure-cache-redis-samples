@@ -17,9 +17,3 @@ obj
 
 packages
 
-; Web Files
-*.js
-!quickstart/nodejs/redistest.js
-*.css
-*.map
-*.scss
