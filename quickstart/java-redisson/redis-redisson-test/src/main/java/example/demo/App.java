@@ -18,7 +18,7 @@ public class App
         // Connect to the Azure Cache for Redis over the TLS/SSL port using the key
         Config config = new Config();
         config.useSingleServer().setPassword(System.getenv("REDISCACHEKEY"))
-            .setAddress(String.format("rediss://%s:6380", System.getenv("REDISCACHEHOSTNAME")));
+            .setAddress(String.format("redis://%s:6379", System.getenv("REDISCACHEHOSTNAME")));
         RedissonClient client = Redisson.create(config);
 
         // Perform cache operations using the cache client
