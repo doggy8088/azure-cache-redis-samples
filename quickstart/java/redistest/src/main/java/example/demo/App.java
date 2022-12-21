@@ -7,17 +7,17 @@ import redis.clients.jedis.Jedis;
  * Redis test
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
 
-        boolean useSsl = true;
+        boolean useSsl = false;
         String cacheHostname = System.getenv("REDISCACHEHOSTNAME");
         String cachekey = System.getenv("REDISCACHEKEY");
 
         // Connect to the Azure Cache for Redis over the TLS/SSL port using the key.
-        Jedis jedis = new Jedis(cacheHostname, 6380, DefaultJedisClientConfig.builder()
+        Jedis jedis = new Jedis(cacheHostname, 6379, DefaultJedisClientConfig.builder()
             .password(cachekey)
             .ssl(useSsl)
             .build());
