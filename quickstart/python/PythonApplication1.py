@@ -1,10 +1,10 @@
 import redis
 
-myHostname = "<Your Host Name>"
-myPassword = "<Your Access Key>"
+myHostname = "localhost"
+myPassword = ""
 
-r = redis.StrictRedis(host=myHostname, port=6380,
-                      password=myPassword, ssl=True)
+r = redis.StrictRedis(host=myHostname, port=6379,
+                      password=myPassword, ssl=False)
 
 result = r.ping()
 print("Ping returned : " + str(result))
