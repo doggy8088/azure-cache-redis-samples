@@ -25,8 +25,8 @@ For examples of using other Node.js clients, see the individual documentation fo
 
 Add environment variables for your cache's **HOST NAME** and **Primary** access key. You will use these variables from your code instead of including the sensitive information directly in your code.
 
-```
-set REDISCACHEHOSTNAME=contosoCache.redis.cache.windows.net
+```cmd
+set REDISCACHEHOSTNAME=localhost
 set REDISCACHEKEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
@@ -36,9 +36,15 @@ set REDISCACHEKEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Change directories to the folder containing this sample.
 
+Run the `npm install` to install `redis` package.
+
+```sh
+npm install
+```
+
 Run the script with Node.js.
 
-```
+```sh
 node redistest.js
 ```
 
