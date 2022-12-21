@@ -7,7 +7,7 @@ async function testCache() {
     var cachePassword = process.env.REDISCACHEKEY;
     var cacheConnection = redis.createClient({
         // rediss for TLS
-        url: "rediss://" + cacheHostName + ":6380",
+        url: "redis://" + cacheHostName + ":6379",
         password: cachePassword,
     });
     await cacheConnection.connect();
